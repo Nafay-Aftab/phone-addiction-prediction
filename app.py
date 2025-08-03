@@ -1,7 +1,6 @@
 import streamlit as st
 import numpy as np
 import pickle
-import matplotlib.pyplot as plt
 
 # Load trained model
 with open("model.pkl", "rb") as f:
@@ -72,20 +71,6 @@ if predict_btn:
 
     st.markdown(f"<h2 style='color:{color}; text-align:center;'>{label}</h2>", unsafe_allow_html=True)
     st.markdown(f"<p style='text-align:center; font-size:18px;'>{message}</p>", unsafe_allow_html=True)
-
-    # ------------------ 📊 Pie Chart ------------------
-    st.markdown("---")
-    st.subheader("🧭 Your Usage Breakdown")
-
-    breakdown_labels = ["Social Media", "Gaming", "Other Usage"]
-    other_usage = max(daily_usage - time_social - time_gaming, 0.01)
-    breakdown_data = [time_social, time_gaming, other_usage]
-
-    fig, ax = plt.subplots()
-    ax.pie(breakdown_data, labels=breakdown_labels, autopct='%1.1f%%', startangle=140,
-           colors=["#3498db", "#9b59b6", "#95a5a6"])
-    ax.axis('equal')
-    st.pyplot(fig)
 
 # ------------------ 👣 Footer ------------------
 st.markdown("---")
