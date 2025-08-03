@@ -45,15 +45,15 @@ cd phone-addiction-prediction
 
 ### 2. Create and activate a virtual environment
 python -m venv venv
-# Activate on Windows
+## Activate on Windows
 venv\Scripts\activate
-# Or activate on macOS/Linux
+## Or activate on macOS/Linux
 source venv/bin/activate
 
 #### 3. Install required packages
 pip install -r requirements.txt
 
-### 4. Run the Streamlit app
+#### 4. Run the Streamlit app
 streamlit run app.py
 
 
