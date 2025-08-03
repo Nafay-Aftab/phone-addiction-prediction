@@ -24,7 +24,7 @@ This project classifies users into different levels of phone addiction (Low, Mod
 
 ## 🧠 Model Info
 
-- **Model:** Logistic Regression (`multinomial`)
+- **Model:** Logistic Regression ()
 - **Preprocessing:**
   - StandardScaler for feature scaling
   - SMOTE for handling class imbalance
